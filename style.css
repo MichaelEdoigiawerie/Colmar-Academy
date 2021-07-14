@@ -1,0 +1,424 @@
+/*Global Styles*/
+* {
+    --col: rgb(77, 74, 74);
+    --bg: lightgray;
+    --coursebg: rgba(200, 200, 200, 0.1);
+    --rad: 1rem;
+}
+
+html {
+    font-size: 10px;
+}
+
+h1, h2, h3, p {
+    color: var(--col);
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+h2 {
+    font-size: 3.5rem;
+}
+
+h3 {
+    font-size: 2.2rem;
+}
+
+p {
+    font-size: 1.8rem;
+}
+
+span {
+    font-weight: bold;
+}
+
+body {
+    margin: 0;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+.desktop-only {
+    display: none;
+}
+
+/*Navigation Bar*/
+nav {
+    height: 6.4rem;
+}
+
+a {
+    font-size: 2rem;
+    transition: all 0.2s ease-in;
+}
+
+.mobile, .desktop {
+    height: 100%;
+}
+
+.mobile {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.desktop {
+    display: none;
+}
+
+.desktop h3 {
+    margin: 0;
+    display: inline-block;
+    font-weight: 100;
+    flex-grow: 1;
+}
+
+.desktop a {
+    margin: 0 0 0 1.6rem;
+    text-decoration: none;
+    color: var(--col);
+}
+
+/*Banner Section*/
+#banner {
+    background: var(--bg);
+}
+
+#banner img {
+    width: 100%;
+    height: auto;
+}
+
+.intro-message {
+    padding: 3.2rem 1.6rem;
+    display: flex;
+    flex-flow: column;
+}
+
+.intro-message h1, h3 {
+    margin: 0 0 3.2rem;
+}
+
+.intro-message p {
+    margin: 0 0 2.4rem;
+}
+
+.intro-message a {
+    text-align: center;
+    background: rgb(120, 120, 120);
+    text-decoration: none;
+    margin: 0 auto;
+    font-weight: bold;
+    padding: 2rem 12rem;
+    color: white;
+}
+
+/*Special Info Section*/
+#special-info {
+    padding: 1.6rem;
+}
+
+.info-box {
+    margin: 0 0 6.4rem;
+}
+
+.info-box h3 {
+    margin: 0 0 1.6rem;
+}
+
+.info-box img {
+    width: 100%;
+    height: auto;
+    margin: 0 0 3.2rem;
+}
+
+.b3 {
+    margin: 0 0 1.6rem;
+}
+
+.highlighted {
+    color: rgb(61, 134, 207); 
+}
+
+/*Courses Section*/
+#courses {
+    border: 1px solid var(--bg);
+    background: var(--coursebg);
+    margin: 0 0.2rem;
+    padding: 3.2rem 1.6rem;
+}
+
+#courses h2 {
+    text-align: center;
+    margin: 0 0 1.6rem;
+}
+
+#courses a {
+    display: block;
+    background: var(--bg);
+    color: var(--col);
+    padding: 1.6rem;
+    margin: 0 0 0.8rem;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/*Thesis Section*/
+#thesis {
+    padding: 3.2rem 0 1.6rem;
+}
+
+#thesis h2 {
+    text-align: center;
+    margin: 0 0 1.6rem;
+}
+
+#thesis video {
+    margin: 0 0 2.4rem;
+    width: 100%;
+    height: auto;
+}
+
+#thesis p {
+    font-size: 1.5rem;
+    margin: 1.6rem 1.6rem;
+}
+
+/*Animations*/
+section a:hover, section a:active {
+    background: rgb(44, 43, 43) !important;
+    color: white !important;
+}
+
+/*Responsiveness*/
+@media only screen and (min-width: 1025px) {
+    /*New Navigation Bar*/
+    .mobile {
+        display: none;
+    }
+
+    .for-mobile {
+        display: none;
+    }
+
+    .desktop {
+        display: flex;
+        align-items: center;
+        padding: 0 2.4rem;
+    }
+
+    .desktop-only {
+        display: block;
+    }
+
+    h1 {
+        font-size: 5rem;
+    }
+
+    h2 {
+        font-size: 4rem;
+    }
+
+    h1, h2 {
+        font-weight: 900;
+    }
+
+    /*New Banner Section*/
+    #banner {
+        padding: 3.2rem 2.4rem;
+        display: flex;
+        align-items: center;
+    }
+
+    #banner img {
+        margin: 0 2.4rem 0 0;
+        width: 60%;
+    }
+    
+    .intro-message {
+        padding: 0 4rem;
+    }
+
+    .intro-message h3 {
+        font-size: 3rem;
+    }
+
+    .intro-message a {
+        padding: 0.8rem auto;
+        font-weight: normal;
+        margin: 0;
+    }
+    
+    /*New Special Info Section*/
+    .special-info {
+        display: flex;
+        padding: 3.2rem 0 3.2rem 2.4rem;
+    }
+
+    .main {
+        width: 60%;
+        margin: 0 2.4rem 0 0;
+    }
+
+    .main h2 {
+        margin: 3.2rem 0 2.4rem 0;
+    }
+
+    .main p{
+        font-size: 2.2rem;
+    }
+
+    .main img{
+        width: 100%;
+        height: auto;
+    }
+
+    .info-footer {
+        font-size: 1.8rem;
+        font-weight: normal;
+        margin: 3.2rem 0 0 0;
+    }
+
+    .info-container {
+        width: 40%;
+    }
+
+    .info {
+        display: flex;
+        align-items: center;
+        padding: 1.6rem;
+        transition: all 0.5s;
+    }
+
+    .info img {
+        width: 35%;
+        height: auto;
+        margin: 0 1.6rem 0 0;
+    }
+
+    .first {
+        padding-top: 0;
+    }
+
+    .words {
+        width: 65%;
+    }
+
+    .words h3, .words p {
+        margin: 0.8rem;
+    }
+
+    /*New Courses Section*/
+    .courses {
+        background: rgba(200, 200, 200, 0.4);
+        padding: 3.2rem 7.2rem;
+    }
+
+    .courses h2 {
+        margin: 0 0 3.2rem;
+        text-align: center;
+    }
+
+    .courses p {
+        margin: 0.8rem 0;
+    }
+
+    .course-catalog {
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .course-box {
+        width: 30%;
+        margin: 0 1.6rem 3.2rem;
+        background: white;
+        border-radius: var(--rad);
+        transition: all 0.5s;
+    }
+
+    .course-box img {
+        display: block;
+        width: 100%;
+        height: auto;
+        border-radius: var(--rad) var(--rad) 0 0;
+    }
+
+    .course-list {
+        padding: 1.6rem 1.6rem 2.4rem;
+        border-radius: 0 0 var(--rad) var(--rad);
+    }
+
+    /*New Thesis Section*/
+    .thesis {
+        padding: 3.2rem 0 3.2rem 2.4rem
+    }
+
+    .thesis h2{
+        margin-top: 0;
+        text-align: center;
+    }
+
+    .events {
+        display: flex;
+    }
+
+    .show {
+        margin: 0 2.4rem 0 0;
+        width: 60%;
+    }
+
+    .show h3 {
+        margin: 2.4rem 0 0.8rem;
+    }
+
+    .show video {
+        width: 100%;
+        height: auto;
+    }
+
+    /*New Footer*/
+    .footer {
+        padding: 1.6rem 2.4rem 3.2rem;
+        border-top: 2px solid rgba(200, 200, 200, 0.4);
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .footer p {
+        margin: 0;
+    }
+
+    .policy p {
+        display: inline-block;
+        margin: 0 0 0 2rem;
+    }
+
+    /*New Animations*/
+    .course-box:hover {
+        cursor: pointer;
+        transform: scale(1.1);
+    }
+
+    .info:hover {
+        cursor: pointer;
+        background: var(--bg);
+    }
+
+    nav a:hover {
+        transform: scale(1.1);
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    html {
+        font-size: 15px;
+    }
+
+    .mobile img {
+        height: 3.2rem;
+        width: auto;
+    }
+}
